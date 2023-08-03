@@ -1,0 +1,355 @@
+:root {
+  --clr-primary-400: #7843e9;
+
+  --clr-neutral-900: #120805;
+  --clr-neutral-600: #4a4a4a;
+  --clr-neutral-400: #e7e7e7;
+  --clr-neutral-300: #9d9490;
+  --clr-neutral-200: #f1f1f1;
+  --clr-neutral-100: #ffffff;
+
+  --ff-accent: "Fraunces", serif;
+  --ff-base: "Source Sans Pro", sans-serif;
+
+  --fw-regular: 500;
+  --fw-bold: 600;
+  --fw-super-bold: 900;
+  --fw-extra-bold: 1000;
+}
+
+/*
+    1. Use a more-intuitive box-sizing model.
+  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--ff-base);
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+.icon-img {
+  width: 20px;
+}
+
+.flexrow {
+  display: flex;
+  align-items: center;
+}
+
+.flexcol {
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.button-style {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-bold);
+  outline: transparent;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1em 3em;
+}
+
+.h1-style {
+  font-weight: var(--fw-extra-bold);
+  letter-spacing: 0.1em;
+  line-height: 1.5em;
+  margin: 0 auto;
+}
+.h2-style {
+  font-weight: var(--fw-super-bold);
+  letter-spacing: 0.07em;
+  font-size: 2rem;
+}
+.h3-style {
+  font-weight: var(--fw-super-bold);
+  font-size: 1.3rem;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1em;
+}
+
+.section-header > * {
+  padding: 1em 0;
+  max-width: 800px;
+}
+/*--------------------------nav---------------------------*/
+nav {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.15em;
+}
+.nav-profile,
+nav label {
+  font-weight: var(--fw-super-bold);
+  padding: 1.5em;
+  gap: 1em;
+}
+.profile-img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+nav ul {
+  background-color: var(--clr-neutral-100);
+  position: absolute;
+
+  top: -100%;
+  width: 100%;
+  padding: 0;
+}
+nav ul li {
+  border-bottom: 1px solid var(--clr-neutral-200);
+  text-align: right;
+  padding: 1em 1.5em;
+  width: 100%;
+}
+#nav-toggler,
+.icon-close {
+  display: none;
+}
+#nav-toggler:checked ~ ul {
+  top: 96px;
+}
+#nav-toggler:checked ~ .icon-hamburger {
+  display: none;
+}
+#nav-toggler:checked ~ .icon-close {
+  display: inline-block;
+}
+/*-----------------header---------------------*/
+header {
+  background: url("images/background.jpg");
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: calc(100vh - 96px);
+  padding-bottom: 4em;
+}
+header > * {
+  max-width: 755px;
+  margin: 1.5em auto;
+}
+/*----------------aboutMe----------------------*/
+.aboutMe {
+  background-color: var(--clr-neutral-200);
+  padding: 5em 1.5em;
+}
+.aboutMe-content h3 {
+  padding: 1em 0;
+}
+.aboutMe-desc,
+.aboutMe-skill {
+  margin: 2em 0;
+}
+.aboutMe-desc > p {
+  padding: 0.4em 0;
+}
+.aboutMe-desc p a {
+  color: var(--clr-primary-400);
+  text-decoration: underline;
+}
+.aboutMe-desc button {
+  margin: 1em;
+}
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.skill-list div {
+  background-color: var(--clr-neutral-400);
+  color: var(--clr-neutral-600);
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+}
+/*-----------------Project---------------------*/
+.projects {
+  padding: 4em 1.5em;
+  margin: 2em 0;
+}
+.project-wrapper {
+  text-align: center;
+}
+.project-img {
+  margin: 0 auto;
+}
+.project-content > * {
+  padding: 0.8em 0;
+}
+.projects button {
+  padding: 1em 3em;
+}
+/*-----------------footer--------------------------*/
+footer {
+  background-color: black;
+  color: var(--clr-neutral-100);
+}
+.footer-top {
+  padding: 2em 1.5em;
+}
+.social-media {
+  margin: 2em 0;
+}
+.social-media > *,
+.footer-content > * {
+  padding: 0.5em 0;
+  max-width: 500px;
+}
+.social-media-icon {
+  gap: 1em;
+}
+.copyright {
+  justify-content: center;
+  font-size: 0.7rem;
+  border-top: 0.1px solid var(--clr-neutral-600);
+  padding: 2em;
+}
+/*-------------project page-----------------------*/
+.project {
+  padding: 3em 1.5em;
+  margin: 0 auto;
+  max-width: 900px;
+}
+.tools {
+  margin: 3em 0;
+}
+.tools > *,
+.live-website > * {
+  margin: 1em 0;
+}
+
+@media screen and (min-width: 900px) {
+  :root {
+    font-size: 20px;
+  }
+  .icon-hamburger {
+    display: none;
+  }
+  nav ul {
+    background-color: transparent;
+    position: static;
+    display: flex;
+    flex-direction: row;
+    top: 0%;
+    width: fit-content;
+    padding: 0 3em;
+  }
+  nav ul li {
+    border: none;
+  }
+
+  .aboutMe-content {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    padding: 2em;
+    gap: 4em;
+  }
+  .aboutMe-content > * {
+    flex: 1;
+    max-width: 600px;
+  }
+
+  .project-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+
+    gap: 5em;
+  }
+  .project-wrapper > * {
+    flex: 1;
+    max-width: 500px;
+    margin: 0;
+  }
+
+  .footer-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 4em 4em;
+  }
+  .social-media {
+    order: 3;
+  }
+}
