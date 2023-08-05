@@ -56,6 +56,7 @@ picture,
 video,
 canvas,
 svg {
+  cursor: pointer;
   display: block;
   max-width: 100%;
 }
@@ -111,6 +112,7 @@ a {
 }
 
 .button-style {
+  cursor: pointer;
   background-color: var(--clr-primary-400);
   color: var(--clr-neutral-100);
   font-weight: var(--fw-bold);
@@ -118,6 +120,7 @@ a {
   border: none;
   border-radius: 0.5rem;
   padding: 1em 3em;
+  margin: 1em;
 }
 
 .h1-style {
@@ -335,6 +338,7 @@ footer {
     align-items: center;
     text-align: left;
 
+    margin: 4em 0;
     gap: 5em;
   }
   .project-wrapper > * {
